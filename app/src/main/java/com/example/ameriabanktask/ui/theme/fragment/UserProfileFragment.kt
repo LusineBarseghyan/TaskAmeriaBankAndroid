@@ -19,12 +19,12 @@ import com.example.ameriabanktask.network.UserProfileViewModel
 class UserProfileFragment : Fragment() {
     private lateinit var binding: FragmentUserProfileBinding
     private val viewModel: UserProfileViewModel by viewModels()
-    //private val args: UserProfileFragmentArgs by navArgs()
+    private val args: UserProfileFragmentArgs by navArgs()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //viewModel.getUserProfile(args)
+        viewModel.getUserProfile(args)
         observeLiveData()
         setupListener()
     }
